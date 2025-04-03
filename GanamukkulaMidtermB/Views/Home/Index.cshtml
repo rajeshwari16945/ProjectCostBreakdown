@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@*
+    Raja Rajeshwari Ganamukkula
+    700763633
+*@
+
+@model ProjectModel
+
+<div class="text-center">
+    <h1>Ganamukkula Midterm B</h1>
+</div>
+<h2>Project Cost Details</h2>
+<p>Please enter project details to find out the cost Details</p>
+<form asp-controller="Home" asp-action="Index" method="POST">
+    <p>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </p>
+    <p>
+        <label asp-for="NormalCost"></label>
+        <input asp-for="NormalCost" />
+        <span asp-validation-for="NormalCost"></span>
+    </p>
+    <p>
+        <label asp-for="PriorityLevel"></label></p>
+        <p><span asp-validation-for="PriorityLevel"></span></p>
+        <p><input asp-for="PriorityLevel" type="radio" value="Normal Priority" />Normal Priority</p>
+        <p><input asp-for="PriorityLevel" type="radio" value="Top Priority" />Top Priority</p>
+        <p><input asp-for="PriorityLevel" type="radio" value="Emergency Compliance" />Emergency Compliance
+    </p>
+    <p>
+        <input type="submit" value="Submit"/>
+    </p>
+</form>

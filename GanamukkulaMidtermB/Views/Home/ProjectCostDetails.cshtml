@@ -1,0 +1,19 @@
+﻿@*
+   Raja Rajeshwari Ganamukkula
+    700763633
+*@
+@model ProjectModel
+
+<h2>Project Cost Details</h2>
+<p>Client Name: @Model.Name</p>
+<p>Priority Level: @Model.PriorityLevel</p>
+<h3>Project Cost Breakdown: </h3>
+<p>Development Costs: @Model.DevelopmentCosts.ToString("C")</p>
+<p>Testing Costs: @Model.TestingCosts.ToString("C")</p>
+<p>Deployment Costs: @Model.DeploymentCosts.ToString("C")</p>
+<p>Profit Margin: @Model.ProfitMargin.ToString("C")</p>
+<p>Total Project Costs: @Model.TotalProjectCost.ToString("C")</p>
+
+<h2>Credits</h2>
+<p>Created by: @ViewBag.Name</p>
+<p>Created by: @ViewBag.Id</p>
